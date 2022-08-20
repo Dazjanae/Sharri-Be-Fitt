@@ -5,22 +5,90 @@
 /*Structure-Container*/
 
 /*-Setting webpage's body to appear in regular order from top to bottom*/
-body, .headercontainer, nav, nav ul, .productoptions, .socialmedia {
+body, .headercontainer, nav, nav ul, .maintopic,.aboutme, .aboutdetails, .aboutSharriBeFitt, .productoptions,.onlineprogram, .mealplanning, .products, .community, .testimonials, .mailinglist, footer, .portantinfo, .socialmedia, .webcloser {
     display: flex;
 }
-body{
+/*Setting certain portions of website in a vertical/column manner*/
+body, .maintopic,.aboutdetails, .aboutSharriBeFitt,.onlineprogram, .mealplanning, .products, .community,.testimonials, .mailinglist, .portantinfo, .socialmedia {
     flex-direction: column;
 }
-.headercontainer, nav, nav ul .productoptions, .socialmedia {
+/*Setting certain portions of website in a horizontal/row manner*/
+.headercontainer, nav, nav ul, .aboutme,.productoptions, footer, .webcloser {
     flex-direction: row; 
 }
+/*Setting space on the edges of the headers and making it scroll as the user scrolls*/
+.headercontainer {
+    padding: 2.5rem;
+    position: sticky;
+    top: 0;
+}
+/*Creating the measurement/spacing for the nav*/
 nav {
     justify-content:space-between;
     align-items: center;
     width: 100%;
 }
+/*Creating the measurement/spacing for the list in the nav*/
 nav li {
     padding: 0 1em;
+} 
+/*Setting the height of the main section with the big photo*/
+.maintopic {
+    height: 33rem;
+}
+/*Creating the measurement/spacing for the about me section... NOTE: this only alters the about me section, not the .aboutdetails section with the about me heading*/
+.aboutme {
+    justify-content: space-around;
+    margin-top: 5em;
+    padding: 3.125rem 0;
+}
+/*Splitting the about me section into 2 equal sections and centering the content*/
+.aboutdetails, .aboutSharriBeFitt {
+    width: 50%;
+    align-items: center;
+}
+/*Setting whitespace between these sections */
+.productoptions, .testimonials, .mailinglist {
+    margin: 5em 0;
+}
+/*Spacing content for these sections, the first 2 listed are horizontal, the last 2 are vertical*/
+.productoptions, footer, .portantinfo, .socialmedia {
+    justify-content: space-evenly;
+}
+/*Spacing content to be in the center*/
+.maintopic,.onlineprogram, .mealplanning, .products, .community, .testimonials, .mailinglist, .portantinfo, .socialmedia{
+    align-items: center;
+}
+/*Spacing content for these sections with equal space between*/
+.onlineprogram, .mealplanning, .products, .community {
+    justify-content: space-between;
+}
+/* Setting the width of each testimonials */
+.test1, .test2, .test3 {
+    width: auto;
+}
+/*Setting the measurements and width fo these sections*/
+.onlineprogram, .products, .mealplanning, .community {
+    height: auto;
+    padding-bottom: 2rem;
+    width: 23%;
+}
+/*Adding padding to the bottom*/
+.aboutdetails {
+    padding-bottom: 2rem;
+}
+/*Adding margin to the bottom of each testimonial & footer section, creating vertical space between each*/
+.test1,.test2, .test3, footer {
+    margin-bottom: 2rem;
+}
+/*Aligning these sections so they are moreso toward the bottom on the .productoptions section, creating a staggering look*/
+.mealplanning,.community {
+    align-self: flex-end;
+}
+/*Setting so contents are completely centered in the container*/
+.webcloser {
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -28,37 +96,205 @@ nav li {
 
 /*Structure-Content*/
 /*- Design of navigation list items*/
-nav a, li {
-    color: white;
-    font-size: 1.25rem;
+nav a, li, .productoptions a {
+    color: black;
+    font-size: 1em;
     text-decoration: none;
 }
-nav a:hover {
+/*-text change when photo is hovered */
+nav a:hover, .productoptions a:hover, .portantinfo a:hover{
     color: pink;
 }
-/*-sizing the images*/
-nav > img {
-    height: 20vh;
-    width: 18vw;
+/*Making links in .productoptions section bold when they are hovered over*/
+.productoptions a:hover{
+    font-weight: 800;
 }
-
+/*-sizing of the logo*/
+nav > img {
+    height: 15vh;
+    width: 12vw;
+    margin-left: 6.25rem;
+}
+/*-sizing of the main photo*/
+.maintopic img{
+    height: 88%;
+    width: 40%;
+    /* border: 40px solid pink; */
+    border: 0.938rem solid white;
+    border-radius: 40%;
+    box-shadow: 0.313rem 0.625rem 0.313rem #ccc;
+    border-style: double;
+    margin-top: 2rem;
+}
+/*Centering of headings for about me, products*/
+.aboutdetails h2,.aboutSharriBeFitt p,.aboutSharriBeFitt span, .productoptions h3,.productoptions p  {
+    text-align: center;
+}
+/*Adding padding space above these elements to be more visually appealing*/
+.aboutdetails h2, .aboutSharriBeFitt span, .productoptions h3,.mailinglist h2 {
+    padding-top: 2rem;
+}
+/*-sizing of the about me image*/
+.aboutdetails img {
+    height: 50vh;
+    width: 30vw;
+}
+/*Expanding this section to cover 100% of its width*/
+.productoptions {
+    width: 100%;
+}
+/*-sizing of the social media icons*/
 .socialmedia img {
     height: 3vh;
     width: 2vw;
 }
-
-.productoptions img {
-    height: 30vh;
-    width: 25vw;
+/*Setting these elements to be positioned based on their original locations and setting color*/
+h1, .maintopic p {
+    position: relative;
+    color: white;
+}
+/*Appearance of "build the body you want" and positioning*/
+.maintopic p {
+    color: pink;
+    font-size: 1.5rem;
+    left: -18.75rem;
+    bottom: 12.2rem;
+    text-shadow: -0.125rem -0.125rem 0.25rem #000000;
+}
+/*Setting appearance of "sharri be fitt", positioning, and borders*/
+.maintopic h1 {
+    left: -18.75rem;
+    bottom: 12.2rem;
+    font-size: 4rem;
+    background-color: #936eadef;
+    border: 0.125rem dashed white;
+    border-radius: 5%;
+}
+/*Setting the font*/
+li, h1, h2, .aboutSharriBeFitt span, h3, .testimonials span, .webcloser  {
+    font-family: 'Poppins';
+}
+/*Setting the appearance of these text*/
+h2, .aboutSharriBeFitt span, h3 {
+    color: white;
+    font-size : 2.5rem;
+    text-shadow: 0.063rem 0.063rem 0.625rem #000000;
+}
+/*Setting the font*/
+.maintopic p, .mailinglist p {
+    font-family: "Alfa Slab One";
+}
+/*Setting the font and appearance*/
+.aboutSharriBeFitt p, .productoptions p {
+    color: white;
+    width: 80%;
+}
+/*Setting the font*/
+.aboutSharriBeFitt p, .productoptions p, form label, .testimonials p, .info, .portantinfo a {
+    font-family: "Quicksand";
+}
+/*Setting the font size*/
+.aboutSharriBeFitt p {
+    font-size: 1.563rem;
+}
+/*Adding space above these portions for visual appeal*/
+.aboutdetails img, .aboutSharriBeFitt p, .productoptions p, .mailinglist p {
+    margin-top: 1.25rem;
+}
+/*Adding space below for visual appeal*/
+.productoptions p, .mailinglist p, form {
+    margin-bottom: 1.25rem;
+}
+/*Setting font and padding on each side of these links (buttons)*/
+.productoptions a {
+    font-family: 'Poppins';
+    padding: 2%;
+}
+/*Setting appearance of the paragraph section of the mailing list section*/
+.mailinglist p {
+    color: whitesmoke;
+    font-weight: 300;
+    width: 20%;
+    line-height: 1.3rem;
+    text-align: center;
+    letter-spacing: .08rem;
+}
+/*Setting appearance of text in the info section*/
+.info {
+    color: #936ead;
+    text-shadow: 0.0025rem 0.0025rem 0.08rem #000000;
+}
+/*Removing the underline decoration from the links*/
+.portantinfo a{
+    text-decoration: none;
+}
+/*Making the text bolder*/
+.webcloser, .info {
+    font-weight: 800;
 }
 
-.maintopic img{
-    height: 73vh;
-    width: 100%;
-}
 
 /*Skin*/
+/* body {
+    background-image: url("");
+} */
+/**/
+.maintopic {
+    background-image: linear-gradient(to right, #936ead, rgb(240, 219, 255));
+    border-bottom: 1px solid;
+    box-shadow: 0 0.375rem 0.5rem -0.25rem black;
+}
+/**/
 .headerskin {
-    background-color: #7B6F8F;
+    background-color: white;
+    z-index: 3;
+}
+/**/
+.aboutdetails {
+    background-color: rgb(240, 219, 255);
+}
+/**/
+.headerskin {
+    border-bottom: 0.063rem solid;
+    box-shadow: 0 0.375rem 0.5rem -0.25rem black;
+}
+/**/
+.aboutme {
+    background-color: #936ead;
+    outline: 0.063rem solid rgb(240, 219, 255);
+    outline-offset: -0.625rem;
+}
+/**/
+.aboutdetails {
+    box-shadow: 0.063rem 0.375rem 0.5rem black;
+    z-index: 2;
+}
+/**/
+.onlineprogram, .products {
+    background-color:#936ead;
+}
+/**/
+.mealplanning, .community {
+    background-color:  rgb(240, 219, 255);
+}
+/**/
+.mailinglist {
+    background-color: #936ead;
+    border-radius: 10%;
+    box-shadow: .063rem 0.375rem 0.5rem black
+}
+/**/
+.productoptions a {
+    background-color: white;
+    color: #936ead;
+    border: 0.125rem ridge rgb(240, 219, 255);
+}
+/**/
+.webcloser {
+    height: 2rem;
+    width: 100%;
+    background-color: rgb(240, 219, 255);
+    border-top: .089rem dashed #936ead;
+    color: white ;
 }
 
