@@ -9,6 +9,10 @@ function losePounds(){
     let currentWeight = Number(document.querySelector('#cWeight').value)
     let goalWeight = Number(document.querySelector('#gWeight').value)
     let loseThesePounds = currentWeight - goalWeight
-
-    document.querySelector('.totalWeightLost').innerHTML = loseThesePounds
+    let gainThesePounds = goalWeight - currentWeight
+    if(goalWeight <= currentWeight){
+    document.querySelector('.totalWeightDifference').innerHTML = `You need to lose ${loseThesePounds} lbs to achieve this weight.`
+    }else {
+        document.querySelector('.totalWeightDifference').innerHTML = `You need to gain ${gainThesePounds} lbs to achieve this weight`
+    }
 }
