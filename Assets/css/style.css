@@ -48,7 +48,7 @@ nav li {
     align-items: center;
 }
 /*Setting whitespace between these sections */
-.productoptions, .weightCalculator, .testimonials, .mailinglist {
+.productoptions, .weightCalculator, .testimonials, .mailinglist, footer {
     margin: 5em 0 0 0;
 }
 /*Spacing content for these sections, the first 2 listed are horizontal, the last 2 are vertical*/
@@ -67,14 +67,15 @@ nav li {
 .test1, .test2, .test3 {
     width: auto;
 }
-/*Setting the measurements and width fo these sections*/
+/*Setting the measurements and width for these sections*/
 .onlineprogram, .products, .mealplanning, .community {
     height: auto;
     padding-bottom: 2rem;
     width: 23%;
 }
+
 /*Adding padding to the bottom*/
-.aboutdetails {
+.aboutdetails, .mailinglist {
     padding-bottom: 2rem;
 }
 /*Centering weight calculator*/
