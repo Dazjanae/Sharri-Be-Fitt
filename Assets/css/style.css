@@ -256,62 +256,62 @@ h2, .aboutSharriBeFitt span, h3 {
 /* body {
     background-image: url("");
 } */
-/**/
+/*beautifying the main display of the page (gradient color purple, and 3d border effect)*/
 .maintopic {
     background-image: linear-gradient(to right, #936ead, rgb(240, 219, 255));
     border-bottom: 1px solid;
     box-shadow: 0 0.375rem 0.5rem -0.25rem black;
 }
-/**/
+/*setting the color of the header and making it the top 3d layer of the webpage*/
 .headerskin {
     background-color: white;
     z-index: 3;
 }
-/**/
+/*background color of the main about me section*/
 .aboutdetails {
     background-color: rgb(240, 219, 255);
 }
-/**/
+/*creating a vorder and shadow for the header/nav bar*/
 .headerskin {
     border-bottom: 0.063rem solid;
     box-shadow: 0 0.375rem 0.5rem -0.25rem black;
 }
-/**/
+/*set main about me color and making the about me section have a shadow effect*/
 .aboutme {
     background-color: #936ead;
     outline: 0.063rem solid rgb(240, 219, 255);
     outline-offset: -0.625rem;
 }
-/**/
+/*giving the make fitness fun portion have shadow effects*/
 .aboutdetails {
     box-shadow: 0.063rem 0.375rem 0.5rem black;
     z-index: 2;
 }
-/**/
+/*setting background color*/
 .onlineprogram, .products {
     background-color:#936ead;
 }
-/**/
+/*background color*/
 .mealplanning, .community {
     background-color:  rgb(240, 219, 255);
 }
-/**/
+/*setting gradient color and consistency*/
 .weightCalculator{
     background-image: linear-gradient(to left, #936ead, rgb(240, 219, 255));
 }
-/**/
+/*overall appearance of mailing list backdrop*/
 .mailinglist {
     background-color: #936ead;
     border-radius: 10%;
     box-shadow: .063rem 0.375rem 0.5rem black
 }
-/**/
+/*appearance for all buttons on page*/
 .productoptions a, .totalButton, .mailButton {
     background-color: white;
     color: #936ead;
     border: 0.125rem ridge rgb(240, 219, 255);
 }
-/**/
+/*appearance and measurements for footer section*/
 .webcloser {
     height: 2rem;
     width: 100%;
