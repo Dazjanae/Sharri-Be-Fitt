@@ -246,6 +246,12 @@ h2, .aboutSharriBeFitt span, h3 {
 .portantinfo a{
     text-decoration: none;
 }
+
+/*making color change when link has been visited*/
+.portantinfo a:visited {
+    color:pink;
+}
+
 /*Making the text bolder*/
 .webcloser, .info {
     font-weight: 800;
