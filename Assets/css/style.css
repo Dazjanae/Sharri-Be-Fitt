@@ -19,7 +19,7 @@ body, .maintopic,.aboutdetails, .aboutSharriBeFitt,.onlineprogram, .mealplanning
 /*Setting space on the edges of the headers and making it scroll as the user scrolls*/
 .headercontainer {
     padding: 2.5rem;
-    position: sticky;
+/*     position: sticky; */
     top: 0;
 }
 /*Creating the measurement/spacing for the nav*/
