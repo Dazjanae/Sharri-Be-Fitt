@@ -5,15 +5,15 @@
 /*Structure-Container*/
 
 /*-Setting webpage's body to appear in regular order from top to bottom*/
-body, .headercontainer, nav, nav ul, .maintopic,.aboutme, .aboutdetails, .aboutSharriBeFitt, .productoptions,.onlineprogram, .mealplanning, .products, .community,.weightCalculator, .weightCalculator form, .testimonials,  .mailinglist, footer, .portantinfo, .socialmedia, .webcloser {
+body, .headercontainer, nav, nav ul, .maintopic,.aboutme, .aboutdetails, .aboutSharriBeFitt, .fitnessjournal,.journaldetails, .journalphoto, .productoptions,.onlineprogram, .mealplanning, .products, .community,.weightCalculator, .weightCalculator form, .testimonials,  .mailinglist, footer, .portantinfo, .socialmedia, .webcloser {
     display: flex;
 }
 /*Setting certain portions of website in a vertical/column manner*/
-body, .maintopic,.aboutdetails, .aboutSharriBeFitt,.onlineprogram, .mealplanning, .products, .community,.weightCalculator, .weightCalculator form, .totalWeightDifference, .testimonials, .mailinglist, .portantinfo, .socialmedia {
+body, .maintopic,.aboutdetails, .aboutSharriBeFitt, .journaldetails, .journalphoto, .onlineprogram, .mealplanning, .products, .community,.weightCalculator, .weightCalculator form, .totalWeightDifference, .testimonials, .mailinglist, .portantinfo, .socialmedia {
     flex-direction: column;
 }
 /*Setting certain portions of website in a horizontal/row manner*/
-.headercontainer, nav, nav ul, .aboutme,.productoptions, footer, .webcloser {
+.headercontainer, nav, nav ul, .aboutme, .fitnessjournal, .productoptions, footer, .webcloser {
     flex-direction: row; 
 }
 /*Setting space on the edges of the headers and making it scroll as the user scrolls*/
@@ -37,7 +37,7 @@ nav li {
     height: 33rem;
 }
 /*Creating the measurement/spacing for the about me section... NOTE: this only alters the about me section, not the .aboutdetails section with the about me heading*/
-.aboutme {
+.aboutme, .fitnessjournal{
     justify-content: space-around;
     margin-top: 5em;
     padding: 3.125rem 0;
@@ -46,6 +46,16 @@ nav li {
 .aboutdetails, .aboutSharriBeFitt {
     width: 50%;
     align-items: center;
+}
+/*Splitting the fitness journal section into 2 sections and centering the content*/
+.journaldetails, .journalphoto{
+    align-items: center;
+}
+.journaldetails{
+    width: 60%;
+}
+.journalphoto {
+    width: 40%;
 }
 /*Setting whitespace between these sections */
 .productoptions, .weightCalculator, .testimonials, .mailinglist, footer {
@@ -101,6 +111,7 @@ form * {
 }
 
 /*Structure-Content*/
+
 /*- Design of navigation list items*/
 nav a, li, .productoptions a, .mailButton {
     color: black;
@@ -108,7 +119,7 @@ nav a, li, .productoptions a, .mailButton {
     text-decoration: none;
 }
 /*-text change when photo is hovered */
-nav a:hover, .productoptions a:hover, .totalButton:hover, .mailButton:hover, .portantinfo a:hover{
+nav a:hover,.journaldetails a:hover, .productoptions a:hover, .totalButton:hover, .mailButton:hover, .portantinfo a:hover{
     color: pink;
 }
 /*Making links in .productoptions section bold when they are hovered over*/
@@ -131,6 +142,17 @@ nav > img {
     box-shadow: 0.313rem 0.625rem 0.313rem #ccc;
     border-style: double;
     margin-top: 2rem;
+}
+.journaldetails a {
+    color:white;
+    font-size: 2em;
+    text-decoration:none;
+    margin-top: .75em;
+    font-family: "Quicksand";
+}
+.journalphoto img {
+    width: 90%;
+    height:100%
 }
 /*Centering of headings for about me, products*/
 .aboutdetails h2,.aboutSharriBeFitt p,.aboutSharriBeFitt span, .productoptions h3,.productoptions p  {
@@ -189,16 +211,30 @@ li, h1, h2, .aboutSharriBeFitt span, h3, .testimonials span,.mailinglist label, 
 /*Setting the appearance of these text*/
 h2, .aboutSharriBeFitt span, h3 {
     color: white;
-    font-size : 2.5rem;
+    font-size : 1.5rem;
     text-shadow: 0.063rem 0.063rem 0.625rem #000000;
 }
+.journaldetails h3 {
+    font-family: "Quicksand";
+    color: pink;
+    font-size: 5em;
+    text-shadow: none;
+}
+.journaldetails h4 {
+    font-size: 3em;
+    font-family: "Poppins";
+}
+
 /*Setting the font*/
 .weightCalculator label, .weightCalculator p{
     text-shadow: -0.02rem -0.02rem 0.1rem #000000
 }
 /*Setting the font*/
-.maintopic p, .mailinglist p {
+.maintopic p, .weightCalculator label{
     font-family: "Alfa Slab One";
+}
+.mailinglist p {
+    font-family: "Quicksand";
 }
 /*Setting the font and appearance*/
 .aboutSharriBeFitt p, .productoptions p {
@@ -225,7 +261,7 @@ h2, .aboutSharriBeFitt span, h3 {
 .productoptions a, .totalButton, .mailButton {
     font-family: 'Poppins';
 }
-.productoptions a, .totalButton {
+.productoptions a, .journaldetails a, .totalButton {
     padding: 2%;
 }
 /*Setting appearance of the paragraph section of the mailing list section*/
@@ -242,9 +278,10 @@ h2, .aboutSharriBeFitt span, h3 {
     color: #936ead;
     text-shadow: 0.0025rem 0.0025rem 0.08rem #000000;
 }
-/*Removing the underline decoration from the links*/
+/*Removing the underline decoration from the links and setting color*/
 .portantinfo a{
     text-decoration: none;
+    color: #936ead;
 }
 
 /*making color change when link has been visited*/
@@ -313,6 +350,12 @@ h2, .aboutSharriBeFitt span, h3 {
     width: 90%;
     align-self: center;
 }
+/*appearance for amazon button on page*/
+.journaldetails a {
+    background-color: #936ead;
+    border-radius: 0%;
+    border: 0.125rem ridge rgb(240, 219, 255);
+}
 /*appearance for all buttons on page*/
 .productoptions a, .totalButton, .mailButton {
     background-color: white;
@@ -326,6 +369,11 @@ h2, .aboutSharriBeFitt span, h3 {
     background-color: rgb(240, 219, 255);
     border-top: .089rem dashed #936ead;
     color: rgb(182, 172, 172) ;
+}
+
+
+.journaldetails {
+    align-self: center;
 }
 
 
@@ -374,6 +422,16 @@ h2, .aboutSharriBeFitt span, h3 {
     .aboutme, .productoptions, .weightCalculator, .testimonials, .mailinglist, footer {
         margin: 1em 0 0 0;
     }
+    .journaldetails h3{
+        font-size: 1.75rem;
+    }
+    .journaldetails h4 {
+        font-size: 1rem;
+    }
+    .journaldetails a {
+        font-size: .8rem;
+    }
+
     .testimonials {
         text-align: center;
     }
@@ -457,5 +515,14 @@ h2, .aboutSharriBeFitt span, h3 {
     .aboutSharriBeFitt p {
         font-size: 1.2rem;
         width: 90%;
+    }
+}
+@media only screen and (min-width: 319px) and (max-width: 415px) {
+    .fitnessjournal {
+        flex-direction: column;
+        margin-top: 2em;
+    }
+    .journaldetails, .journalphoto{
+        width: 100%;
     }
 }
