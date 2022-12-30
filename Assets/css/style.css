@@ -119,8 +119,12 @@ nav a, li, .productoptions a, .mailButton {
     text-decoration: none;
 }
 /*-text change when photo is hovered */
-nav a:hover,.journaldetails a:hover, .productoptions a:hover, .totalButton:hover, .mailButton:hover, .portantinfo a:hover{
+nav a:hover, .productoptions a:hover, .totalButton:hover, .mailButton:hover, .portantinfo a:hover{
     color: pink;
+}
+/* make Amazon text bold when hovered over */
+.journaldetails a:hover{
+    font-weight: 700;
 }
 /*Making links in .productoptions section bold when they are hovered over*/
 .productoptions a:hover, .totalButton:hover, .mailButton:hover{
